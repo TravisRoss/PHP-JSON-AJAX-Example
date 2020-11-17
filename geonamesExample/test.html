@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>Table with three APIs</title>
+		<meta charset="utf-8">
+		<meta name="description" content="AJAX/PHP/CURL/JSON example">
+		<meta name="author" content="travis ross">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="libs/css/geonames.css">
+	</head>
+
+	<body>
+
+
+		<div id="divResults">
+			<table>
+
+				<!-- TABLE HEADER -->
+				<tr>
+					<th id="blue">API name</th>
+					<th>API description</th>
+					<th></th>
+				</tr>
+
+				<!-- OCEAN -->
+				<tr>
+					
+					<th>1. Ocean</th>
+					<th>
+						<input type="number" step="0.01" id="inputLat" name="latitude">
+						<input type="number" step="0.01" id="inputLong" name="longtitude">
+					</th>
+					<th>
+						<button id="btnRun">Submit</button>
+					</th>
+
+				</tr>
+				
+				<!-- ADDRESS -->
+				<tr>
+					
+					<th>2. Adress</th>
+					<th>
+						<input type="number" step="0.01" id="inputLat2" name="latitude2">
+						<input type="number" step="0.01" id="inputLong2" name="longtitude2">
+					</th>
+					<th>
+						<button id="btnRun2">Submit</button>
+					</th>
+				</tr>
+				
+				<!-- STREET -->
+				<tr>
+					
+					<th>3. Find Nearby Street</th>
+					<th>
+						<input type="number" step="0.01" id="inputLat3" name="latitude3">
+						<input type="number" step="0.01" id="inputLong3" name="longtitude3">
+					</th>
+					<th>
+						<button id="btnRun3">Submit</button>
+					</th>
+				</tr>
+				<tr>
+
+					<div id="divResults">
+						<table>
+
+							<!-- OCEAN RESULT -->
+							<tr>
+								<td align="right">
+								Distance: 
+								</td>
+	
+								<td id="txtDistance">
+								</td>
+							</tr>
+
+							<tr>
+								<td align="right">
+								Name: 
+								</td>
+								<td id="txtName">
+						
+								</td>
+							</tr>
+
+							<!-- ADDRESS RESULT -->
+							<tr>
+								<td align="right">
+								Distance: 
+								</td>
+	
+								<td id="txtDistance2">
+								</td>
+							</tr>
+							<tr>
+								<td align="right">
+								Street: 
+								</td>
+	
+								<td id="txtStreet">
+								</td>
+							</tr>
+							
+							<!-- STREET RESULT -->
+							<tr>
+								<td align="right">
+								Name: 
+								</td>
+	
+								<td id="txtName2">
+								</td>
+							</tr>
+							<tr>
+								<td align="right">
+								Country Code: 
+								</td>
+	
+								<td id="txtCountryCode">
+								</td>
+							</tr>
+
+						</table>
+					</div>
+
+				</tr>
+			</table>
+		</div>
+
+		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+		<script type="application/javascript" src="libs/js/getOcean.js"></script>
+		<script type="application/javascript" src="libs/js/getAddress.js"></script>
+		<script type="application/javascript" src="libs/js/getStreet.js"></script>
+		
+
+	</body>
+</html>
